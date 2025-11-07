@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomButtonStyle">
+        <!-- 크기 -->
+        <!-- 배경색 및 모양 (shape로 분리됨) -->
+        <item name="android:background">@drawable/bg_custom_button</item>
+        <!-- 그림자(elevation) -->
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="WhiteBoxStyle">
+        <item name="android:layout_width">352dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/white_blank</item>
+        <item name="android:elevation">2dp</item> <!-- 약간의 입체감 -->
+    </style>
+</resources>
