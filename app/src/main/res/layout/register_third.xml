@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Top View - ID 수정: view_top_bar -->
     <View
-        android:id="@+id/view"
+        android:id="@+id/view_top_bar"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:background="#A6A6A6"
@@ -22,25 +23,40 @@
         android:text="신장 (cm)"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/view_top_bar" />
 
-    <GridLayout
+    <!-- gridLayout1 (신장) -> LinearLayout으로 변경 -->
+    <LinearLayout
         android:id="@+id/gridLayout1"
         style="@style/WhiteBoxStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:layout_marginStart="28dp"
+        android:gravity="center"
+        android:layout_marginEnd="28dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView1">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:background="#A6A6A6"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- Selection Field for Height -->
+        <TextView
+            android:id="@+id/height_select_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@android:color/transparent"
+            android:hint="신장을 선택해 주세요."
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="showHeightSelector"
+            android:textSize="18sp"
+            tools:text="175cm"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView2"
@@ -53,16 +69,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout1" />
 
-    <GridLayout
+    <!-- gridLayout2 (체중) -> LinearLayout으로 변경 -->
+    <LinearLayout
         android:id="@+id/gridLayout2"
         style="@style/WhiteBoxStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <!-- Selection Field for Weight -->
+        <TextView
+            android:id="@+id/weight_select_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@android:color/transparent"
+            android:hint="체중을 선택해 주세요."
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="showWeightSelector"
+            android:textSize="18sp"
+            tools:text="70kg"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
@@ -75,16 +113,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
 
-    <GridLayout
+    <!-- gridLayout3 (운동목적) -> LinearLayout으로 변경 -->
+    <LinearLayout
         android:id="@+id/gridLayout3"
         style="@style/WhiteBoxStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <!-- Selection Field for Goal -->
+        <TextView
+            android:id="@+id/goal_select_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@android:color/transparent"
+            android:hint="운동 목적을 선택해 주세요."
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="showGoalSelector"
+            android:textSize="18sp"
+            tools:text="다이어트"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView4"
@@ -97,23 +157,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout3" />
 
-    <GridLayout
+    <!-- gridLayout4 (난이도) -> LinearLayout으로 변경 -->
+
+    <!-- Bottom View - ID 수정: view_bottom_bar -->
+
+    <LinearLayout
         android:id="@+id/gridLayout4"
         style="@style/WhiteBoxStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="28dp"
+        android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
-    <View
+        <TextView
+            android:id="@+id/difficulty_select_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:hint="난이도를 선택해 주세요."
+            android:onClick="showDifficultySelector"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="18sp"
+            tools:text="초급" />
+    </LinearLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:background="#A6A6A6"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-16dp" />
+        tools:layout_editor_absoluteX="0dp">
 
+        <include
+            android:id="@+id/next3_button"
+            layout="@layout/register_footer" />
+    </FrameLayout>
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

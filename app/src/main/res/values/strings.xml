@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PhonePT</string>
+    <string name="reg_first_title">계정 유형을 선택해 주세요</string>
+    <string name="reg_first_title1">회원님의 유형을 선택해 주세요</string>
+    <string name="left_option">트레이너</string>
+    <string name="left_option1">PT</string>
+    <string name="right_option">헬스장 회원</string>
+    <string name="right_option1">자율운동</string>
 </resources>
