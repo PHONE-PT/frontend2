@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footer_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:elevation="4dp"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/footer_button_bg"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_custom_button"
+        android:elevation="6dp"
+        android:text="다음"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</LinearLayout>
