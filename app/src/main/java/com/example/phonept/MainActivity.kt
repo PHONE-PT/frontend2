@@ -19,12 +19,18 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // 회원가입 버튼 (R.id.regi_button) 클릭 시 register_first로 이동
         val regiButton: Button = findViewById(R.id.regi_button)
         regiButton.setOnClickListener {
             val intent = Intent(this, register_first::class.java)
             startActivity(intent)
         }
 
-
+        // 로그인 버튼 (R.id.log_button) 클릭 시 TrainerHomeActivity로 이동
+        val logButton: Button = findViewById(R.id.log_button)
+        logButton.setOnClickListener {
+            val intent = Intent(this, TrainerHomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

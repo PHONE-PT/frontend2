@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="180dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/routine_box"
+    android:padding="8dp"
+    >
+
+    <!-- 1. OOO 회원 텍스트 (위, 가운데 고정) -->
+    <TextView
+        android:id="@+id/tv_member_name_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OOO 회원"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- 2. 요일 헤더 (월 화 수 목 금) -->
+    <LinearLayout
+        android:id="@+id/ll_days_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_member_name_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <!-- 각 요일은 동일한 너비를 가짐 -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="월"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="화"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="목"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="금"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- 3. 루틴 박스 목록 (Vertical Container) -->
+    <LinearLayout
+        android:id="@+id/ll_routine_boxes_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_days_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <!-- 루틴 1행 (5개의 박스) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView android:id="@+id/tv_box1_mon" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box1_tue" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box1_wed" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box1_thu" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box1_fri" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- 루틴 2행 (5개의 박스) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView android:id="@+id/tv_box2_mon" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box2_tue" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box2_wed" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box2_thu" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box2_fri" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- 루틴 3행 (5개의 박스) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView android:id="@+id/tv_box3_mon" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box3_tue" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box3_wed" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box3_thu" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_box3_fri" android:layout_weight="1" android:text="□"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- 기타 루틴을 나타내는 "..." 텍스트 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:gravity="start"
+            android:layout_marginTop="4dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

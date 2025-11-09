@@ -23,6 +23,7 @@
         <activity android:name=".register_first" />
         <activity android:name=".RegisterScndActivity" />
         <activity android:name=".RegisterThirdActivity" android:exported="false" />
+        <activity android:name=".TrainerHomeActivity" android:exported="false" />
     </application>
 
 </manifest>

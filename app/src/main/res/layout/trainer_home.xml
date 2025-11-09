@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/trainer_home_root"
+    >
+
+    <!-- ================================== -->
+    <!-- 1. 고정 헤더 영역 (PHONE PT 및 타이틀) -->
+    <!-- ================================== -->
+
+    <!-- 앱 타이틀 -->
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PHONE PT"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 트레이너 OOO -->
+    <TextView
+        android:id="@+id/tv_trainer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="트레이너 OOO"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_app_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_title" />
+
+    <!-- 이번 주 루틴 -->
+    <TextView
+        android:id="@+id/tv_routine_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이번 주 루틴"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_trainer_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trainer_name" />
+
+    <!-- 구분선 (선택 사항: 시각적 구분) -->
+    <View
+        android:id="@+id/divider_header"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_routine_title" />
+
+    <!-- ================================== -->
+    <!-- 2. 루틴 리스트 영역 (RecyclerView) -->
+    <!-- ================================== -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_routine_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_routine_card"
+        tools:itemCount="3"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/divider_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register_routine"
+        android:layout_marginBottom="16dp"/>
+
+
+    <!-- ================================== -->
+    <!-- 3. 루틴 등록 버튼 -->
+    <!-- ================================== -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_register_routine"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_custom_button"
+        android:text="루틴 등록하기"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
