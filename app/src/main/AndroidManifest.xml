@@ -20,8 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity android:name=".register_first" />
-        <activity android:name=".RegisterScndActivity" />
+        <activity android:name=".register_first" />
+        <!--<activity android:name=".RegisterScndActivity" />
         <activity android:name=".RegisterThirdActivity" android:exported="false" />
         -->
     </application>
