@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="25dp"
+    android:viewportWidth="32"
+    android:viewportHeight="25">
+    <!-- SVG의 pathData를 그대로 변환했습니다. -->
+    <path
+        android:fillColor="#FF333333"
+        android:pathData="M15.5833,0L0,12.6505H4.25V24.1505H14.1667V16.4838H17V24.1505H26.9167V12.6505H31.1667L15.5833,0ZM15.5833,3.43902L24.0833,10.3395V11.3727V21.5949H19.8333V13.9283H11.3333V21.5949H7.08333V10.3395L15.5833,3.43902Z" />
+</vector>

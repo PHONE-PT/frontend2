@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- 메인 브랜드 색상 (선택된 아이템) -->
+    <color name="primary_color">#FF000000</color> <!-- 보라색 계열로 가정, 실제 색상에 맞게 수정 필요 -->
+    <!-- 기본 아이템 색상 -->
+    <color name="gray">#808080</color>
 </resources>

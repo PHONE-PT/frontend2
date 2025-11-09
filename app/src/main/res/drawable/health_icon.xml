@@ -1,0 +1,70 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="34dp"
+    android:height="35dp"
+    android:viewportWidth="34"
+    android:viewportHeight="35"
+    android:tint="?attr/colorControlNormal">
+
+    <!-- 첫 번째 막대 (왼쪽) -->
+    <path
+        android:pathData="M11.6875,7.65625H8.5C7.9132,7.65625 7.4375,8.14594 7.4375,8.75V26.25C7.4375,26.8541 7.9132,27.3438 8.5,27.3438H11.6875C12.2743,27.3438 12.75,26.8541 12.75,26.25V8.75C12.75,8.14594 12.2743,7.65625 11.6875,7.65625Z"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeColor="#808080"
+        android:strokeLineCap="round"/>
+
+    <!-- 두 번째 막대 (오른쪽) -->
+    <path
+        android:pathData="M25.5,7.65625H22.3125C21.7257,7.65625 21.25,8.14594 21.25,8.75V26.25C21.25,26.8541 21.7257,27.3438 22.3125,27.3438H25.5C26.0868,27.3438 26.5625,26.8541 26.5625,26.25V8.75C26.5625,8.14594 26.0868,7.65625 25.5,7.65625Z"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeColor="#808080"
+        android:strokeLineCap="round"/>
+
+    <!-- 오른쪽 돌출부 -->
+    <path
+        android:pathData="M26.5625,10.9375H29.75C30.0318,10.9375 30.302,11.0527 30.5013,11.2579C30.7006,11.463 30.8125,11.7412 30.8125,12.0312V22.9688C30.8125,23.2588 30.7006,23.537 30.5013,23.7421C30.302,23.9473 30.0318,24.0625 29.75,24.0625H26.5625"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeColor="#808080"
+        android:strokeLineCap="round"/>
+
+    <!-- 왼쪽 돌출부 -->
+    <path
+        android:pathData="M7.4375,24.0625H4.25C3.96821,24.0625 3.69796,23.9473 3.4987,23.7421C3.29944,23.537 3.1875,23.2588 3.1875,22.9688V12.0312C3.1875,11.7412 3.29944,11.463 3.4987,11.2579C3.69796,11.0527 3.96821,10.9375 4.25,10.9375H7.4375"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeColor="#808080"
+        android:strokeLineCap="round"/>
+
+    <!-- 중앙 연결선 -->
+    <path
+        android:pathData="M12.75,17.5H21.25"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeColor="#808080"
+        android:strokeLineCap="round"/>
+
+    <!-- 오른쪽 외부 선 -->
+    <path
+        android:pathData="M30.8125,17.5H32.9375"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeColor="#808080"
+        android:strokeLineCap="round"/>
+
+    <!-- 왼쪽 외부 선 -->
+    <path
+        android:pathData="M1.0625,17.5H3.1875"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeColor="#808080"
+        android:strokeLineCap="round"/>
+</vector>

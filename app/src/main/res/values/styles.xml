@@ -14,4 +14,33 @@
         <item name="android:background">@drawable/white_blank</item>
         <item name="android:elevation">2dp</item> <!-- 약간의 입체감 -->
     </style>
+    <!-- 내비게이션 버튼 컨테이너 스타일 -->
+    <style name="NavButtonContainerStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <!-- 배경 효과는 터치 리플 이펙트를 위해 'selectableItemBackground' 등을 사용할 수 있습니다. -->
+    </style>
+
+    <!-- 내비게이션 아이콘 스타일 -->
+    <style name="NavIconStyle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <!-- 내비게이션 텍스트 스타일 -->
+    <style name="NavTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
 </resources>

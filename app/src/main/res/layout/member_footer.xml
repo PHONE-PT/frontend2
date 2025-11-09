@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 전체 푸터 컨테이너: 화면 하단 전체 폭을 차지하도록 설정 -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@android:color/white"
+    android:elevation="8dp">
+
+    <!-- 5개의 아이템을 가로로 균등하게 배치하기 위한 LinearLayout -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- 1. 홈 (Home) - home_icon 사용 -->
+        <!-- 현재는 선택된 상태로 가정하고 primary_color 사용 -->
+        <LinearLayout
+            android:id="@+id/nav_home"
+            style="@style/NavButtonContainerStyle"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/icon_home"
+                style="@style/NavIconStyle"
+                android:src="@drawable/home_icon"
+                android:tint="@color/primary_color"
+                android:contentDescription="홈 아이콘" />
+            <TextView
+                style="@style/NavTextStyle"
+                android:text="홈"
+                android:textColor="@color/primary_color"/>
+        </LinearLayout>
+
+        <!-- 2. 루틴 (Routine) - docu_icon 사용 -->
+        <LinearLayout
+            android:id="@+id/nav_routine"
+            style="@style/NavButtonContainerStyle"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/icon_routine"
+                style="@style/NavIconStyle"
+                android:src="@drawable/docu_icon"
+                android:tint="@color/gray"/>
+            <TextView
+                style="@style/NavTextStyle"
+                android:text="루틴"/>
+        </LinearLayout>
+
+        <!-- 3. 운동 (Workout) - health_icon 사용 -->
+        <LinearLayout
+            android:id="@+id/nav_workout"
+            style="@style/NavButtonContainerStyle"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/icon_workout"
+                style="@style/NavIconStyle"
+                android:src="@drawable/health_icon"
+                android:tint="@color/gray"/>
+            <TextView
+                style="@style/NavTextStyle"
+                android:text="운동"/>
+        </LinearLayout>
+
+        <!-- 4. 뱃지 (Badge) - badge_icon 사용 -->
+        <LinearLayout
+            android:id="@+id/nav_badge"
+            style="@style/NavButtonContainerStyle"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/icon_badge"
+                style="@style/NavIconStyle"
+                android:src="@drawable/badge_icon"
+                android:tint="@color/gray"/>
+            <TextView
+                style="@style/NavTextStyle"
+                android:text="뱃지"/>
+        </LinearLayout>
+
+        <!-- 5. 마이페이지 (My Page) - mypage_icon 사용 -->
+        <LinearLayout
+            android:id="@+id/nav_mypage"
+            style="@style/NavButtonContainerStyle"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/icon_mypage"
+                style="@style/NavIconStyle"
+                android:src="@drawable/mypage_icon"
+                android:tint="@color/gray"/>
+            <TextView
+                style="@style/NavTextStyle"
+                android:text="마이페이지"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
