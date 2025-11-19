@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/member_home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ================================== -->
+    <!-- 1. 고정 헤더 영역 -->
+    <!-- ================================== -->
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
+        android:text="운동 시작"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_member_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="OOO님의"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_title" />
+
+    <TextView
+        android:id="@+id/tv_routine_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="오늘의 루틴"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_member_greeting" />
+
+    <!-- ================================== -->
+    <!-- 2. 이번 주 루틴 카드 (item_routine_card 스타일 확장) -->
+    <!-- ================================== -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/routine_card_large"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/button"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_routine_title">
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- ================================== -->
+    <!-- 3. 오늘의 루틴 진행률 (Progress Bar) -->
+    <!-- ================================== -->
+
+    <!-- ================================== -->
+    <!-- 4. 운동 시작하기 버튼 -->
+    <!-- ================================== -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_start_exercise"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_custom_button"
+        android:text="운동 시작하기"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
