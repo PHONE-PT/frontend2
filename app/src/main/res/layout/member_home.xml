@@ -64,11 +64,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_routine_title">
 
-        <!--
-        item_routine_card.xml의 내부 레이아웃을 여기에 복사하여 사용합니다.
-        (월, 화, 수, 목, 금 및 □□□□□)
-        -->
-
         <!-- 요일 헤더 -->
         <LinearLayout
             android:id="@+id/ll_days_header"
@@ -104,9 +99,9 @@
             android:paddingStart="24dp"
             android:paddingEnd="24dp">
 
-            <!-- 루틴 1행 -->
+            <!-- 루틴 1행 (가독성을 위해 첫 번째 박스만 색상을 변경했습니다.) -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
-                <TextView android:layout_weight="1" android:text="□" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
+                <TextView android:layout_weight="1" android:text="□" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:textSize="18sp" android:textColor="#2962FF" android:textStyle="bold"/>
                 <TextView android:layout_weight="1" android:text="□" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
                 <TextView android:layout_weight="1" android:text="□" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
                 <TextView android:layout_weight="1" android:text="□" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:textSize="18sp" android:textColor="#333333" android:textStyle="bold"/>
@@ -179,10 +174,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_progress_title"
             tools:text="60%" />
 
-        <!--
-        프로그레스 바 (게이지 바)
-        Kotlin에서 변수를 이용해 'progress' 속성을 제어합니다.
-        -->
+        <!-- 프로그레스 바 (게이지 바) -->
         <ProgressBar
             android:id="@+id/pb_routine_progress"
             style="?android:attr/progressBarStyleHorizontal"
@@ -201,6 +193,7 @@
 
     <!-- ================================== -->
     <!-- 4. 운동 시작하기 버튼 -->
+    <!-- 하단 제약 조건 수정: 푸터 위에 위치하도록 변경했습니다. -->
     <!-- ================================== -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_start_exercise"
@@ -208,17 +201,27 @@
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_custom_button"
         android:text="운동 시작하기"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/member_footer_include"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progress_card"
-        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintVertical_bias="1.0"
         />
+
+    <!-- ================================== -->
+    <!-- 5. 하단 내비게이션 바 (푸터) -->
+    <!-- ================================== -->
+    <include
+        android:id="@+id/member_footer_include"
+        layout="@layout/member_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

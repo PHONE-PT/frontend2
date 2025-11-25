@@ -20,12 +20,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <!-- 1. 홈 (Home) - home_icon 사용 -->
-        <!-- 현재는 선택된 상태로 가정하고 primary_color 사용 -->
+        <!-- 1. 홈 (Home) - 활성화 상태 (primary_color 적용) -->
         <LinearLayout
             android:id="@+id/nav_home"
             style="@style/NavButtonContainerStyle"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
             <ImageView
                 android:id="@+id/icon_home"
                 style="@style/NavIconStyle"
@@ -38,63 +40,83 @@
                 android:textColor="@color/primary_color"/>
         </LinearLayout>
 
-        <!-- 2. 루틴 (Routine) - docu_icon 사용 -->
+        <!-- 2. 루틴 (Routine) -->
         <LinearLayout
             android:id="@+id/nav_routine"
             style="@style/NavButtonContainerStyle"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
             <ImageView
                 android:id="@+id/icon_routine"
                 style="@style/NavIconStyle"
                 android:src="@drawable/docu_icon"
-                android:tint="@color/gray"/>
+                android:tint="@color/primary_color"
+                android:contentDescription="루틴 아이콘" />
             <TextView
                 style="@style/NavTextStyle"
+                android:textColor="@color/black"
                 android:text="루틴"/>
         </LinearLayout>
 
-        <!-- 3. 운동 (Workout) - health_icon 사용 -->
+        <!-- 3. 운동 (Workout) -->
         <LinearLayout
             android:id="@+id/nav_workout"
             style="@style/NavButtonContainerStyle"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
             <ImageView
                 android:id="@+id/icon_workout"
                 style="@style/NavIconStyle"
                 android:src="@drawable/health_icon"
-                android:tint="@color/gray"/>
+                android:tint="@color/primary_color"
+                android:contentDescription="운동 아이콘" />
             <TextView
                 style="@style/NavTextStyle"
+                android:textColor="@color/primary_color"
                 android:text="운동"/>
         </LinearLayout>
 
-        <!-- 4. 뱃지 (Badge) - badge_icon 사용 -->
+        <!-- 4. 뱃지 (Badge) -->
         <LinearLayout
             android:id="@+id/nav_badge"
             style="@style/NavButtonContainerStyle"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
             <ImageView
                 android:id="@+id/icon_badge"
                 style="@style/NavIconStyle"
                 android:src="@drawable/badge_icon"
-                android:tint="@color/gray"/>
+                android:tint="@color/primary_color"
+                android:contentDescription="뱃지 아이콘" />
             <TextView
                 style="@style/NavTextStyle"
+                android:textColor="@color/primary_color"
                 android:text="뱃지"/>
         </LinearLayout>
 
-        <!-- 5. 마이페이지 (My Page) - mypage_icon 사용 -->
+        <!-- 5. 마이페이지 (My Page) -->
         <LinearLayout
             android:id="@+id/nav_mypage"
             style="@style/NavButtonContainerStyle"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
             <ImageView
                 android:id="@+id/icon_mypage"
                 style="@style/NavIconStyle"
                 android:src="@drawable/mypage_icon"
-                android:tint="@color/gray"/>
+                android:tint="@color/primary_color"
+                android:contentDescription="마이페이지 아이콘" />
             <TextView
                 style="@style/NavTextStyle"
+                android:textColor="@color/primary_color"
                 android:text="마이페이지"/>
         </LinearLayout>
     </LinearLayout>
