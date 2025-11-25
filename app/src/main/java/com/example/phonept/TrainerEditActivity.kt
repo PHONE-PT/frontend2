@@ -1,25 +1,37 @@
 package com.example.phonept
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 /**
- * 루틴을 편집하거나 새로 등록하는 화면입니다.
- * trainer_edit.xml 레이아웃을 사용합니다.
+ * 트레이너 루틴 편집/등록 화면 액티비티
+ * - 루틴을 수정/등록하고, 완료 시 홈 화면으로 돌아갑니다.
  */
 class TrainerEditActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.trainer_edit) // trainer_edit 레이아웃 사용
+        setContentView(R.layout.trainer_edit) // trainer_edit.xml 레이아웃 사용
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.trainer_edit_root)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        // 1. '루틴 등록하기' 버튼 설정
+        val btnRegisterRoutine: Button = findViewById(R.id.btn_register_routine)
+        btnRegisterRoutine.setOnClickListener {
+            // 실제로는 여기에 루틴 저장 로직이 들어갑니다.
+
+
+            // 현재 액티비티를 종료하고 이전 액티비티(TrainerHomeActivity)로 돌아갑니다.
+            finish()
+        }
+
+        // 2. '취소' 버튼 설정
+        val btnCancelEdit: Button = findViewById(R.id.btn_cancel_edit)
+        btnCancelEdit.setOnClickListener {
+            Toast.makeText(this, "루틴 등록이 취소되었습니다.", Toast.LENGTH_SHORT).show()
+
+            // 현재 액티비티를 종료하고 이전 액티비티(TrainerHomeActivity)로 돌아갑니다.
+            finish()
         }
     }
 }
