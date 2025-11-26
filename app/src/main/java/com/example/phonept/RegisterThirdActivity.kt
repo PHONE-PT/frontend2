@@ -1,11 +1,13 @@
 package com.example.phonept
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 
 class RegisterThirdActivity : AppCompatActivity() {
 
@@ -22,6 +24,17 @@ class RegisterThirdActivity : AppCompatActivity() {
 
         // 요청하신 레이아웃 파일명으로 설정합니다.
         setContentView(R.layout.register_third)
+
+        val footerRootView: View? = findViewById(R.id.next3_button)
+
+        footerRootView?.let { root ->
+            val nextButton = root.findViewById<AppCompatButton>(R.id.footer_button_bg)
+
+            nextButton?.setOnClickListener {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
     /**
@@ -73,4 +86,6 @@ class RegisterThirdActivity : AppCompatActivity() {
             textViewId = R.id.difficulty_select_text
         )
     }
+
+
 }
