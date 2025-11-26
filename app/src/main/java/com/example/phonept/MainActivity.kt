@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         // 로그인 버튼 (R.id.log_button) 클릭 시 TrainerHomeActivity로 이동
         val logButton: Button = findViewById(R.id.log_button)
         logButton.setOnClickListener {
-            val intent = Intent(this, MemberHomeActivity::class.java)
+            val intent = Intent(this, TrainerHomeActivity::class.java)
             startActivity(intent)
         }
     }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "981531673336",
+    "project_id": "phonept-cc828",
+    "storage_bucket": "phonept-cc828.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981531673336:android:86e64905a7384d8e4fb10d",
+        "android_client_info": {
+          "package_name": "com.example.phonept"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh713OaHL3-n5BZDlK8qoEQKQN5iugzJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
