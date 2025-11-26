@@ -9,17 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 
 class RegisterThirdActivity : AppCompatActivity() {
 
-    // 1. 신장, 체중, 목적, 난이도에 대한 옵션 리스트 정의 (요청받은 내용 기반)
-    private val heightOptions = arrayOf(
-        "~ 165cm", "166 ~ 170cm", "171 ~ 175cm", "176 ~ 180cm", "181 ~ 185cm", "186cm ~"
-    )
-
-    // 사용자가 제시한 패턴(~80kg까지 5kg 단위, 이후 100kg~)에 따라 확장
-    private val weightOptions = arrayOf(
-        "~ 60kg", "61 ~ 65kg", "66 ~ 70kg", "71 ~ 75kg", "76 ~ 80kg",
-        "81 ~ 85kg", "86 ~ 90kg", "91 ~ 95kg", "96 ~ 100kg", "100kg ~"
-    )
-
     private val goalOptions = arrayOf(
         "체지방 감량", "근력 향상", "체력 증진"
     )
@@ -63,29 +52,7 @@ class RegisterThirdActivity : AppCompatActivity() {
 
     // 💡 XML onClick 속성을 위한 드롭다운 핸들러 함수들
 
-    /**
-     * 신장(Height) 선택 드롭다운/다이얼로그 표시
-     */
-    fun showHeightSelector(view: View) {
-        showSelectorDialog(
-            title = "신장 (cm) 선택",
-            options = heightOptions,
-            textViewId = R.id.height_select_text
-        )
-    }
-
-    /**
-     * 체중(Weight) 선택 드롭다운/다이얼로그 표시
-     */
-    fun showWeightSelector(view: View) {
-        showSelectorDialog(
-            title = "체중 (kg) 선택",
-            options = weightOptions,
-            textViewId = R.id.weight_select_text
-        )
-    }
-
-    /**
+   /**
      * 운동목적(Goal) 선택 드롭다운/다이얼로그 표시
      */
     fun showGoalSelector(view: View) {
