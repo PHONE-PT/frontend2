@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="88dp"
-        android:text="아이디"
+        android:text="이메일"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,14 +36,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <EditText
-            android:id="@+id/id_edittext"
+            android:id="@+id/email_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_row="0"
             android:layout_column="0"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:hint="아이디를 입력해 주세요."
+            android:hint="이메일을 입력해 주세요."
             android:paddingStart="16dp"
             android:paddingEnd="16dp"/>
     </GridLayout>
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <EditText
-            android:id="@+id/nick_edittext"
+            android:id="@+id/nick_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_row="0"
@@ -108,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <EditText
-            android:id="@+id/pwd_edittext"
+            android:id="@+id/pwd_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_row="0"
@@ -145,7 +145,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <EditText
-            android:id="@+id/pwdcor_edittext"
+            android:id="@+id/pwdcor_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_row="0"

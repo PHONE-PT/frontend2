@@ -42,7 +42,7 @@
 
         <!-- Selection Field for Height -->
         <EditText
-            android:id="@+id/id_edittext"
+            android:id="@+id/height_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_row="0"
@@ -82,7 +82,7 @@
 
         <!-- Selection Field for Weight -->
         <EditText
-            android:id="@+id/id_edittext1"
+            android:id="@+id/weight_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_row="0"

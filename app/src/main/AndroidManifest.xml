@@ -6,6 +6,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:name=".PhonePTApp"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -26,6 +27,7 @@
         <activity android:name=".TrainerHomeActivity" android:exported="false" />
         <activity android:name=".TrainerEditActivity" android:exported="false" />
         <activity android:name=".MemberHomeActivity" android:exported="false" />
+
     </application>
 
 </manifest>

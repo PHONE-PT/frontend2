@@ -1,11 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.example.phonept"
     compileSdk = 36
+
 
     buildFeatures {
         viewBinding = true
@@ -46,7 +48,6 @@ dependencies {
             implementation(libs.material)
             implementation(libs.androidx.activity)
             implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -55,7 +56,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
 
     // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.7.1")) // 최신 BOM 사용 권장
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0")) // 최신 BOM 사용 권장
     implementation("com.google.firebase:firebase-auth-ktx") // 인증
     implementation("com.google.firebase:firebase-firestore-ktx") // 사용자 데이터 저장
 
