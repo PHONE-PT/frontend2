@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "981531673336",
-    "project_id": "phonept-cc828",
-    "storage_bucket": "phonept-cc828.firebasestorage.app"
+    "project_number": "942334908534",
+    "project_id": "phone-pt",
+    "storage_bucket": "phone-pt.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:981531673336:android:86e64905a7384d8e4fb10d",
+        "mobilesdk_app_id": "1:942334908534:android:36ba6d54f0621a7a836757",
         "android_client_info": {
           "package_name": "com.example.phonept"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBh713OaHL3-n5BZDlK8qoEQKQN5iugzJY"
+          "current_key": "AIzaSyC4e8Hv1s_ja4UN0OFHl2ZW37T7a2lwCFg"
         }
       ],
       "services": {
