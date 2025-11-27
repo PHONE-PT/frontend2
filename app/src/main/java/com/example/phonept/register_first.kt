@@ -180,8 +180,8 @@ class register_first : AppCompatActivity() {
 
         // 2. 💡 UserRole (문자열) 계산 및 전달 (요청 사항)
         val role = when (value) {
-            1 -> "trainer" // 1일 때 trainer
-            in 2..3 -> "member" // 2 또는 3일 때 member
+            1 -> "Trainer" // 1일 때 trainer
+            in 2..3 -> "Member" // 2 또는 3일 때 member
             else -> "unknown"
         }
         intent.putExtra(RegisterScndActivity.USER_ROLE_KEY, role)
