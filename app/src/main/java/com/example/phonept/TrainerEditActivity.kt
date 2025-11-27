@@ -166,8 +166,8 @@ class TrainerEditActivity : AppCompatActivity() {
                     if (i < selectedItemsList.size) {
                         // 선택된 항목이 있다면 해당 TextView에 배치
                         val item = selectedItemsList[i]
-                        tv.text = "●\n$item"
-                        tv.textSize = 10f // 텍스트 크기 조정
+                        tv.text = "$item"
+                        tv.textSize = 14f // 텍스트 크기 조정
                         Log.d("Update", "Row ${i + 1} updated with: $item")
                     } else {
                         // 선택된 항목의 개수보다 TextView가 많으면 나머지 TextView는 '□'로 비움
